@@ -5,8 +5,10 @@ function Select(props){
         <div className = {styles.form_control}>
             <label htmlFor={props.name}> {props.text}</label>
             <select
-            name={props.name} 
-            id={props.name} 
+                name={props.name} 
+                id={props.name} 
+                onChange = {props.handleOnChange}
+                value={props.value||''}
             > 
                 <option>Selecione uma opção</option>
                 {props.options.map((option) =>(
